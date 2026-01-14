@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// Layout
+
+import Login from 'Pages/Login/Login'// Layout
 import AdminLayout from "Layouts/AdminLayout";
 
 // Pages
@@ -12,7 +13,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<AdminLayout />}>
+        <Route path="/" element={<Login />} />
+        <Route path="/home" element={<AdminLayout />}>
           <Route index element={<Appointment />} />
           <Route path="appointment" element={<Appointment />} />
           <Route path="clients" element={<ClientRecord />} />
